@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pathwise — tu coach de LoL con IA</title>
+  <meta name="description" content="Pathwise revisa tus partidas de League of Legends, te dice qué falló y te da ejercicios concretos para mejorar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..700&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body class="con-hero">
+
+  <header class="nav">
+    <nav class="contenedor nav__interior" aria-label="Principal">
+      <a href="#inicio" class="nav__logo">Path<span>wise</span></a>
+      <ul class="nav__enlaces">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== Inicio ===== -->
+    <section id="inicio" class="hero-cine" aria-labelledby="titulo-inicio">
+
+      <!-- Capa 1: escena (un valle nocturno con un nexo de cristal al fondo) -->
+      <div class="capa capa-escena" aria-hidden="true">
+        <svg class="escena" viewBox="0 0 1440 810" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="cielo" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#0A0812"/>
+              <stop offset=".55" stop-color="#1B1433"/>
+              <stop offset="1" stop-color="#110E19"/>
+            </linearGradient>
+            <radialGradient id="halo" cx="720" cy="340" r="520" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#8E6FD8" stop-opacity=".55"/>
+              <stop offset=".35" stop-color="#8E6FD8" stop-opacity=".18"/>
+              <stop offset="1" stop-color="#8E6FD8" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="suelo">
+              <stop offset="0" stop-color="#4FB3BF" stop-opacity=".16"/>
+              <stop offset="1" stop-color="#4FB3BF" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="cristal" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#E4DAFA"/>
+              <stop offset=".45" stop-color="#A58BE2"/>
+              <stop offset="1" stop-color="#4FB3BF"/>
+            </linearGradient>
+            <filter id="desenfoque" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="18"/>
+            </filter>
+          </defs>
+
+          <rect width="1440" height="810" fill="url(#cielo)"/>
+          <rect width="1440" height="810" fill="url(#halo)"/>
+
+          <!-- Haz de luz vertical -->
+          <rect x="700" y="0" width="40" height="420" fill="#A58BE2" opacity=".12" filter="url(#desenfoque)"/>
+
+          <!-- Cordilleras -->
+          <path d="M0 470 L120 430 L260 455 L380 400 L520 440 L640 392 L720 420 L820 386 L960 436 L1080 404 L1220 450 L1340 420 L1440 446 V810 H0Z" fill="#191330"/>
+          <path d="M0 540 L160 505 L300 528 L470 488 L600 520 L720 500 L860 522 L1010 486 L1160 526 L1300 500 L1440 520 V810 H0Z" fill="#130F22"/>
+          <ellipse cx="720" cy="560" rx="620" ry="140" fill="url(#suelo)"/>
+
+          <!-- Nexo de cristal -->
+          <g class="escena__nexo">
+            <circle cx="720" cy="330" r="90" fill="#8E6FD8" opacity=".35" filter="url(#desenfoque)"/>
+            <polygon points="720,210 768,330 720,452 672,330" fill="url(#cristal)" opacity=".92"/>
+            <polygon points="720,210 768,330 720,330" fill="#FFFFFF" opacity=".22"/>
+            <polygon points="720,330 672,330 720,452" fill="#110E19" opacity=".18"/>
+            <ellipse cx="720" cy="470" rx="120" ry="10" fill="#4FB3BF" opacity=".25" filter="url(#desenfoque)"/>
+          </g>
+
+          <!-- Motas de luz -->
+          <g fill="#C9B8F0">
+            <circle class="escena__mota" cx="380" cy="300" r="2" opacity=".5"/>
+            <circle class="escena__mota" cx="530" cy="220" r="1.5" opacity=".4"/>
+            <circle class="escena__mota" cx="610" cy="390" r="2.5" opacity=".45"/>
+            <circle class="escena__mota" cx="850" cy="260" r="2" opacity=".5"/>
+            <circle class="escena__mota" cx="940" cy="360" r="1.5" opacity=".35"/>
+            <circle class="escena__mota" cx="1060" cy="230" r="2" opacity=".4"/>
+            <circle class="escena__mota" cx="1190" cy="320" r="1.5" opacity=".3"/>
+            <circle class="escena__mota" cx="260" cy="380" r="1.5" opacity=".3"/>
+          </g>
+          <g fill="#7FD0D8">
+            <circle class="escena__mota" cx="460" cy="330" r="1.5" opacity=".4"/>
+            <circle class="escena__mota" cx="790" cy="410" r="2" opacity=".45"/>
+            <circle class="escena__mota" cx="1000" cy="300" r="1.5" opacity=".35"/>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Capa 2: palabra gigante, detrás de los montes -->
+      <div class="capa capa-palabra" aria-hidden="true">
+        <p class="palabra"><span style="--d:0ms">P</span><span style="--d:100ms">a</span><span style="--d:270ms">t</span><span style="--d:240ms">h</span><span style="--d:200ms">w</span><span style="--d:370ms">i</span><span style="--d:150ms">s</span><span style="--d:320ms">e</span></p>
+      </div>
+
+      <!-- Capa 3: montes en primer plano (izquierdo y derecho, se juntan en V en el centro) -->
+      <div class="capa capa-monte capa-monte--l" aria-hidden="true">
+        <svg class="monte monte--l" viewBox="0 0 720 400" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="roca" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#1A1428"/>
+              <stop offset="1" stop-color="#08060D"/>
+            </linearGradient>
+          </defs>
+          <path d="M0 40 L60 52 L110 47 L170 80 L230 94 L300 130 L360 150 L430 200 L500 244 L580 300 L650 356 L720 400 L0 400Z" fill="url(#roca)"/>
+          <path d="M0 40 L60 52 L110 47 L170 80 L230 94 L300 130 L360 150 L430 200 L500 244 L580 300 L650 356 L720 400" fill="none" stroke="#4FB3BF" stroke-opacity=".55" stroke-width="2" vector-effect="non-scaling-stroke"/>
+        </svg>
+      </div>
+      <div class="capa capa-monte capa-monte--r" aria-hidden="true">
+        <svg class="monte monte--r" viewBox="0 0 720 400" preserveAspectRatio="none">
+          <path d="M720 30 L655 46 L600 40 L540 76 L470 92 L400 124 L340 148 L270 196 L200 246 L130 300 L60 360 L0 400 L720 400Z" fill="url(#roca)"/>
+          <path d="M720 30 L655 46 L600 40 L540 76 L470 92 L400 124 L340 148 L270 196 L200 246 L130 300 L60 360 L0 400" fill="none" stroke="#8E6FD8" stroke-opacity=".6" stroke-width="2" vector-effect="non-scaling-stroke"/>
+        </svg>
+      </div>
+
+      <!-- Capa 4: sombra para la legibilidad -->
+      <div class="capa capa-sombra" aria-hidden="true"></div>
+
+      <!-- Capa 5: interfaz -->
+      <div class="contenedor hero-cine__ui">
+        <div class="hero-cine__cabecera">
+          <h1 id="titulo-inicio" class="hero-cine__titulo"><span class="desliza desliza--abajo">¿Juegas, pierdes y no sabes por qué?</span></h1>
+          <div class="hero-cine__lado">
+            <p class="hero-cine__subtitulo"><span class="desliza desliza--arriba">Pathwise revisa tus partidas de League of Legends, te dice qué falló y te da ejercicios concretos para la próxima.</span></p>
+            <a href="#contacto" class="boton boton--principal hero-cine__cta">Analiza tu partida</a>
+          </div>
+        </div>
+
+        <ol class="pasos" aria-label="Cómo funciona">
+          <li class="paso"><div class="paso__fila"><span class="paso__num">01</span><span class="paso__texto">Juegas tu partida,<br>como siempre.</span></div></li>
+          <li class="paso"><div class="paso__fila"><span class="paso__num">02</span><span class="paso__texto">La revisamos<br>minuto a minuto.</span></div></li>
+          <li class="paso"><div class="paso__fila"><span class="paso__num">03</span><span class="paso__texto">Te señalamos los<br>errores que más pesan.</span></div></li>
+          <li class="paso"><div class="paso__fila"><span class="paso__num">04</span><span class="paso__texto">Practicas con<br>un reto concreto.</span></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Servicios ===== -->
+    <section id="servicios" class="seccion seccion--alterna">
+      <div class="contenedor">
+        <span class="etiqueta-seccion">Servicios</span>
+        <h2 class="seccion__titulo">Cada partida te enseña algo. Te ayudamos a verlo.</h2>
+        <p class="seccion__intro">No te soltamos una lista de cincuenta fallos. Buscamos lo que más te está frenando y te damos un paso claro para tu próxima partida.</p>
+
+        <div class="rejilla rejilla--3">
+          <article class="tarjeta">
+            <div class="tarjeta__numero">01</div>
+            <h3>Análisis de partidas</h3>
+            <p>Revisamos tu partida y detectamos tus errores mecánicos, estratégicos y de build, con el minuto exacto en que pasaron.</p>
+            <div class="ejemplo">
+              <strong>Por ejemplo</strong>
+              «Entre el minuto 8 y el 12 perdiste 25 de CS por hacer back con la oleada a mitad de línea.»
+            </div>
+          </article>
+
+          <article class="tarjeta">
+            <div class="tarjeta__numero">02</div>
+            <h3>Propuestas de mejora</h3>
+            <p>Para cada punto débil, un ejercicio concreto y medible que puedes practicar en tu próxima ranked o en normales.</p>
+            <div class="ejemplo">
+              <strong>Por ejemplo</strong>
+              «Reto: antes de cada back, empuja la oleada a la torre. Objetivo: 3 de cada 4 backs.»
+            </div>
+          </article>
+
+          <article class="tarjeta">
+            <div class="tarjeta__numero">03</div>
+            <h3>Análisis de composición</h3>
+            <p>Estudiamos las sinergias entre los campeones de tu equipo y te ayudamos a elegir runas y build según la partida.</p>
+            <div class="ejemplo">
+              <strong>Por ejemplo</strong>
+              «Tu equipo tiene mucho engage y poco peel: con tu ADC, prioriza runas de supervivencia.»
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Proyectos ===== -->
+    <section id="proyectos" class="seccion">
+      <div class="contenedor">
+        <span class="etiqueta-seccion">Proyectos</span>
+        <h2 class="seccion__titulo">En qué estamos trabajando</h2>
+        <p class="seccion__intro">Empezamos por lo que más te va a ayudar a subir: entender tus propias partidas.</p>
+
+        <div class="rejilla rejilla--2">
+          <article class="proyecto proyecto--destacado">
+            <span class="estado estado--desarrollo">En desarrollo</span>
+            <h3>Analizador de partidas con propuestas de mejora</h3>
+            <p>Nuestro producto principal. Sube tu partida y recibe:</p>
+            <ul>
+              <li>Un repaso de lo que hiciste bien.</li>
+              <li>Los 1 a 3 errores que más te están costando.</li>
+              <li>Ejercicios para corregirlos en tus siguientes partidas.</li>
+            </ul>
+            <p class="proyecto__nota">Tras el lanzamiento seguiremos con mantenimiento y mejoras continuas.</p>
+          </article>
+
+          <article class="proyecto">
+            <span class="estado estado--proximo">Próximamente</span>
+            <h3>Equipos, composición y builds</h3>
+            <p>Un módulo para entender tu draft antes de que empiece la partida:</p>
+            <ul>
+              <li>Sinergias y puntos débiles de la composición.</li>
+              <li>Ayuda para construir tus builds de runas.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Equipo ===== -->
+    <section id="equipo" class="seccion seccion--alterna">
+      <div class="contenedor">
+        <span class="etiqueta-seccion">Equipo</span>
+        <h2 class="seccion__titulo">Quiénes estamos detrás</h2>
+        <p class="seccion__intro">Tres personas que juegan, programan y analizan datos, y que también se han quedado atascadas alguna vez.</p>
+
+        <div class="rejilla rejilla--3">
+          <article class="tarjeta miembro">
+            <div class="avatar" aria-hidden="true">J</div>
+            <h3>Jorge</h3>
+            <p class="miembro__formacion">DAM y ASIR</p>
+            <a href="equipo/jorge.html" class="enlace-ficha">Ver ficha →</a>
+          </article>
+
+          <article class="tarjeta miembro">
+            <div class="avatar avatar--acento" aria-hidden="true">V</div>
+            <h3>Victor</h3>
+            <p class="miembro__formacion">Ciencia de Datos</p>
+            <a href="equipo/victor.html" class="enlace-ficha">Ver ficha →</a>
+          </article>
+
+          <article class="tarjeta miembro">
+            <div class="avatar" aria-hidden="true">J</div>
+            <h3>Jaime</h3>
+            <p class="miembro__formacion">DAM e Información y Documentación</p>
+            <a href="equipo/jaime.html" class="enlace-ficha">Ver ficha →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contacto ===== -->
+    <section id="contacto" class="seccion">
+      <div class="contenedor contacto">
+        <div>
+          <span class="etiqueta-seccion">Contacto</span>
+          <h2 class="seccion__titulo">¿Hablamos?</h2>
+          <p class="seccion__intro">Cuéntanos en qué te sientes atascado o déjanos tu Riot ID y te avisamos en cuanto puedas analizar tu primera partida.</p>
+          <!-- TODO: sustituir por el email real de Pathwise -->
+          <p>También puedes escribirnos a <a href="mailto:contacto@pathwise.example">contacto@pathwise.example</a>.</p>
+        </div>
+
+        <!-- Sin backend: el formulario abre el cliente de correo. TODO: cambiar el email -->
+        <form class="formulario" action="mailto:contacto@pathwise.example" method="post" enctype="text/plain">
+          <div class="campo">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+            <span class="campo__error">Dinos cómo te llamas.</span>
+          </div>
+
+          <div class="campo">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+            <span class="campo__error">Revisa el email, parece que le falta algo.</span>
+          </div>
+
+          <div class="campo">
+            <label for="riot-id">Riot ID <small>(opcional)</small></label>
+            <input type="text" id="riot-id" name="riot_id" placeholder="Nombre#EUW">
+          </div>
+
+          <div class="campo">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Ej.: juego mid, estoy en Plata y siempre me quedo sin CS a mitad de partida." required></textarea>
+            <span class="campo__error">Escríbenos aunque sea una línea.</span>
+          </div>
+
+          <button type="submit" class="boton boton--principal">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie__interior">
+      <span>© 2026 Pathwise</span>
+      <ul class="pie__enlaces">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <p class="pie__aviso">Pathwise no está afiliado ni respaldado por Riot Games. League of Legends es una marca registrada de Riot Games, Inc.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
