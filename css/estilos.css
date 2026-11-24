@@ -21,7 +21,7 @@
   --alto-nav: 64px;
 
   --fuente: "Onest", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --fuente-display: "Archivo", "Onest", system-ui, sans-serif;
+  --fuente-display: "Sora", "Onest", system-ui, sans-serif;
 
   /* Curvas de animación */
   --qout: cubic-bezier(.25, 1, .5, 1);

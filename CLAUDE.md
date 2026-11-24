@@ -11,7 +11,7 @@ La web es estática (HTML + CSS, sin build ni JS): basta con abrir `index.html` 
 - `equipo/<nombre>.html`: una ficha por persona, todas con la misma plantilla. Enlazan con rutas `../`, así que si cambias la nav o el pie de una, cámbialos en todas y en `index.html`.
 - `css/estilos.css`: una única hoja con la paleta como variables en `:root` y clases estilo BEM (`bloque__elemento--modificador`).
 - **Hero cinemático (`.hero-cine`):** es una escena SVG en capas (escena → palabra gigante "Pathwise" → montes → sombra → UI). Las entradas son keyframes CSS con retrasos por elemento. [js/main.js](js/main.js) solo pone la variable `--p` (0–1, cuánto se ha hecho scroll del hero) y el CSS la usa en los *envoltorios* `.capa-*`. Las animaciones de entrada van en los hijos, para que los dos `transform` no se pisen. Con `prefers-reduced-motion` se desactiva todo.
-- **Fuentes:** Archivo (variable, con eje `wdth`, para titulares y la palabra gigante) y Onest (cuerpo), cargadas desde Google Fonts.
+- **Fuentes:** Sora para los titulares, la palabra gigante, el logo y los números (variable `--fuente-display`), y Onest para los textos (`--fuente`). Las dos se cargan desde Google Fonts. Sora sustituye a Spiegel, que pidió el equipo, porque Spiegel es una fuente propietaria de Riot Games y no se puede usar en la web. Sora no tiene eje de anchura, así que los `font-stretch` del CSS no tienen efecto.
 - Los `TODO` y los `.pendiente` marcan datos que faltan: el email de contacto (ahora `contacto@pathwise.example`), el main y el rol de cada miembro y sus enlaces.
 
 Los textos de cara al público se escriben con la skill `voz-pathwise` ([.claude/skills/voz-pathwise/SKILL.md](.claude/skills/voz-pathwise/SKILL.md)).
